@@ -2,6 +2,6 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0
 
 WORKDIR /App
 
-EXPOSE 5057
+COPY . .
 
-ENTRYPOINT ["sleep", "50000"]
+ENTRYPOINT ["dotnet", "watch", "run"]
